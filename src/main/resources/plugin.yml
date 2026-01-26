@@ -1,0 +1,26 @@
+name: CraftD3K
+version: ${version}
+main: de.madetv1280.craftD3K.CraftD3K
+api-version: '1.21'
+description: A simple /craft-Plugin
+author: madetv1280
+website: https://me.madetv1280.de
+commands:
+  craft:
+    description: Opens 3x3 Crafting Menu
+  c:
+    description: Short for /craft
+  craftreload:
+    description: Reloads the Plugin
+permissions:
+  craftd3k.use.craft:
+    description: Allows /craft or /c
+    default: not op
+
+  craftd3k.use.reload:
+    description: Reloads CraftD3K-Plugin
+    default: op
+
+  craftd3k.bypass.cooldown:
+    description: Skips the cooldown between /craft usage
+    default: op

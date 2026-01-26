@@ -1,0 +1,28 @@
+# ---------------------------------------------------------
+# Plugin Name: CraftD3K
+# Author: madetv1280
+# Copyright (c) 2026 madetv1280
+# License: MIT License (https://mit-license.org/)
+# ---------------------------------------------------------
+
+# config.yml
+
+# Enables or disables the plugin
+enabled: true
+opening-menu-msg: false;
+
+# [COOLDOWN SETTINGS ARE NOT IMPLEMENTED YET!]
+# Cooldown for using the /craft command
+cooldown: 0 # Time in seconds
+cooldown-msg: true
+bypass-cooldown-as-op: true
+
+# Checks for newer plugin versions on Modrinth and informs you
+check-for-update: true
+
+# Sends anonymous usage statistics to bStats for analytics purposes (like Server Software, MC-Version, etc.)
+# https://bstats.org/
+bStats: true
+
+# Debug mode (More detailed error messages)
+debug: false

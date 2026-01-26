@@ -1,0 +1,27 @@
+# ---------------------------------------------------------
+# Plugin Name: CraftD3K
+# Author: madetv1280
+# Copyright (c) 2026 madetv1280
+# License: MIT-License https://mit-license.org/
+# ---------------------------------------------------------
+
+# messages.yml
+
+prefix: "[CraftD3K] | "
+
+only-players: "§cThis command can only be used by players."
+opening-menu: "Opening 3x3 Crafting Menu!"
+no-permission: "§aYou have no permission to do that!"
+plugin-reloaded: "Plugin reloaded!"
+debug-enabled: "Debug mode is enabled!"
+
+
+# DO NOT CHANGE MESSAGES HERE! Unless you KNOW WHAT YOU ARE DOING. THESE ARE INTERNAL MESSAGES THAT NORMAL USERS WILL NOT SEE.
+message-not-found: "Message '{key}' not found, report this to an Admin!"
+using-bstats: "CraftD3K is using bStats."
+running-newer-than_available: "You are running version %s, which is newer than the latest available version %s on Modrinth."
+running-older-version: "You are running version %s, but a newer version %s is available on Modrinth. Consider updating!"
+running-lastest-version: "You are running the latest version. Everything is up to date!"
+failed-check-update-unknown-version-format: "Failed to check for updates due to an unknown version format."
+failed-check-update-network-connection:  "Failed to check for updates due to network connection."
+disable-plugin: "Disabling Plugin (maybe reloading), shutting down..."
