@@ -7,7 +7,6 @@
 
 # config.yml
 
-# Enables or disables the plugin
 enabled: true
 opening-menu-msg: false;
 
@@ -24,5 +23,4 @@ check-for-update: true
 # https://bstats.org/
 bStats: true
 
-# Debug mode (More detailed error messages)
 debug: false

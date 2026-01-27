@@ -60,7 +60,7 @@ public final class CraftD3K extends JavaPlugin {
 
     private void initMetrics() {
         // init Metrics
-        new Metrics(this, Integration.METRICS_PLUGIN_ID);
+        Metrics metrics = new Metrics(this, Integration.METRICS_PLUGIN_ID);
 
         log().info(InternalMsg.USING_BSTATS);
     }

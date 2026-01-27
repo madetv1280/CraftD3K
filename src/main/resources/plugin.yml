@@ -4,7 +4,7 @@ main: de.madetv1280.craftD3K.CraftD3K
 api-version: '1.21'
 description: A simple /craft-Plugin
 author: madetv1280
-website: https://me.madetv1280.de
+website: https://modrinth.com/user/madetv1280
 commands:
   craft:
     description: Opens 3x3 Crafting Menu

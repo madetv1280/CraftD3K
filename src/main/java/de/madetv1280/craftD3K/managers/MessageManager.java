@@ -1,5 +1,6 @@
 package de.madetv1280.craftD3K.managers;
 
+import de.madetv1280.craftD3K.constants.FileName;
 import de.madetv1280.craftD3K.constants.keys.Config;
 import de.madetv1280.craftD3K.constants.keys.messages.InternalMsg;
 import de.madetv1280.craftD3K.constants.keys.messages.Msg;
@@ -16,10 +17,10 @@ public class MessageManager {
 
     public static void init(JavaPlugin plugin) {
 
-        file = new File(plugin.getDataFolder(), Config.FileName.MESSAGES_YML);
+        file = new File(plugin.getDataFolder(), FileName.MESSAGES_YML);
 
         if (!file.exists()) {
-            plugin.saveResource(Config.FileName.MESSAGES_YML, false);
+            plugin.saveResource(FileName.MESSAGES_YML, false);
         }
 
         messages = YamlConfiguration.loadConfiguration(file);

@@ -15,11 +15,10 @@ no-permission: "§aYou have no permission to do that!"
 plugin-reloaded: "Plugin reloaded!"
 debug-enabled: "Debug mode is enabled!"
 
-
-# DO NOT CHANGE MESSAGES HERE! Unless you KNOW WHAT YOU ARE DOING. THESE ARE INTERNAL MESSAGES THAT NORMAL USERS WILL NOT SEE.
+# THESE ARE INTERNAL (console) MESSAGES THAT NORMAL USERS WILL NOT SEE.
 message-not-found: "Message '{key}' not found, report this to an Admin!"
 using-bstats: "CraftD3K is using bStats."
-running-newer-than_available: "You are running version %s, which is newer than the latest available version %s on Modrinth."
+running-newer-than-available: "You are running version %s, which is newer than the latest available version %s on Modrinth."
 running-older-version: "You are running version %s, but a newer version %s is available on Modrinth. Consider updating!"
 running-lastest-version: "You are running the latest version. Everything is up to date!"
 failed-check-update-unknown-version-format: "Failed to check for updates due to an unknown version format."

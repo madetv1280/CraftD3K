@@ -43,16 +43,16 @@ public class PluginLogger {
     }
 
     // Get msg via key and fill in the args
-    private String formatMessage(String key, Object... args) {
-        String msg = getMessage(key);
+    private String formatMessage(String key, Object... arguments) {
+        String message = getMessage(key);
 
-        if (args != null && args.length > 0) {
+        if (arguments != null && arguments.length > 0) {
             try {
-                msg = String.format(msg, args);
+                message = String.format(message, arguments);
             } catch (IllegalFormatException e) {
-                msg = "Message format error for key '" + key + "': " + e.getMessage();
+                message = "Message format error for key '" + key + "': " + e.getMessage();
             }
         }
-        return msg;
+        return message;
     }
 }

@@ -14,4 +14,5 @@ public class InternalMsg {
     public static final String FAILED_CHECK_UPDATE_NETWORK_CONNTECTION = "failed-check-update-network-connection";
     public static final String DISABLE_PLUGIN = "disable-plugin";
     public static final String DEBUG_ENABLED = "debug-enabled";
+
 }

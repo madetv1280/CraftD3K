@@ -44,7 +44,6 @@ public class CraftCommand implements CommandExecutor {
         }
 
 
-
         // Check if opening-msg is needed
         if (plugin.getConfig().getBoolean(Config.SHOW_OPEN_MENU_MSG)) {
             sender.sendMessage(getMessage(Msg.OPENING_MENU));
