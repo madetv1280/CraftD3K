@@ -4,6 +4,15 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class VersionUtil {
+
+    /*
+     * Result of version comparison:
+     *  -1  => RUNNING_OLDER_VERSION
+     *   0  => RUNNING_LATEST_VERSION
+     *   1  => RUNNING_NEWER_THAN_AVAILABLE
+     *  99  => FAILED_CHECK_UPDATE_UNKNOWN_VERSION_FORMAT
+     */
+
     public static int compareVersions(String versionLatest, String versionCurrent) {
         try {
             if (versionLatest == null || versionCurrent == null) {
@@ -15,6 +24,7 @@ public class VersionUtil {
             Matcher latestMatcher = versionPattern.matcher(versionLatest);
             Matcher currentMatcher = versionPattern.matcher(versionCurrent);
 
+            // If it doesn't match the version pattern
             if (!latestMatcher.find() || !currentMatcher.find()) {
                 return 99;
             }

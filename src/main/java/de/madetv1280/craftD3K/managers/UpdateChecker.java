@@ -18,24 +18,28 @@ public class UpdateChecker {
     public static void checkForUpdates(Plugin plugin) {
 
         String latestVersion = getLatestVersion();
-        String currentVersion = plugin.getDescription().getVersion();
+        String currentVersion = plugin.getPluginMeta().getVersion();
 
 
         switch (compareVersions(latestVersion, currentVersion)) {
-            case 1:
-                log().info(InternalMsg.RUNNING_NEWER_THAN_AVAILABLE,
-                        currentVersion, latestVersion);
+            case 99:
+                log().warn(InternalMsg.FAILED_CHECK_UPDATE_UNKNOW_VERSION_FORMAT);
                 break;
+
             case -1:
                 log().info(InternalMsg.RUNNING_OLDER_VERSION,
                         currentVersion, latestVersion);
                 break;
+
             case 0:
                 log().info(InternalMsg.RUNNING_LATEST_VERSION);
                 break;
-            case 99:
-                log().info(InternalMsg.FAILED_CHECK_UPDATE_UNKNOW_VERSION_FORMAT);
+
+            case 1:
+                log().info(InternalMsg.RUNNING_NEWER_THAN_AVAILABLE,
+                        currentVersion, latestVersion);
                 break;
+
         }
 
     }
@@ -63,7 +67,7 @@ public class UpdateChecker {
 
             return latestVersion;
         } catch (Exception e) {
-            log().info(InternalMsg.FAILED_CHECK_UPDATE_NETWORK_CONNTECTION);
+            log().warn(InternalMsg.FAILED_CHECK_UPDATE_NETWORK_CONNECTION);
 
             return null;
         }

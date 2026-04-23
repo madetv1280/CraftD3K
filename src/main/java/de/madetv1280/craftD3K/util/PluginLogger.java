@@ -1,14 +1,18 @@
 package de.madetv1280.craftD3K.util;
 
+import de.madetv1280.craftD3K.managers.ConfigManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.IllegalFormatException;
 
 import static de.madetv1280.craftD3K.managers.MessageManager.getMessage;
+import static de.madetv1280.craftD3K.managers.ConfigManager.*;
 
 public class PluginLogger {
     private final JavaPlugin plugin;
     private static PluginLogger instance;
+
+
 
     public PluginLogger(JavaPlugin plugin) {
         this.plugin = plugin;
@@ -36,14 +40,13 @@ public class PluginLogger {
     }
 
     public void debug(String msg_key, Object... args) {
-        if (plugin.getConfig().getBoolean("debug", false)) {
+        if (debugEnabled()) {
             plugin.getLogger().info("[DEBUG] " + formatMessage(msg_key, args));
         }
-
     }
 
     // Get msg via key and fill in the args
-    private String formatMessage(String key, Object... arguments) {
+    public String formatMessage(String key, Object... arguments) {
         String message = getMessage(key);
 
         if (arguments != null && arguments.length > 0) {

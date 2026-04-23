@@ -8,11 +8,10 @@
 # config.yml
 
 enabled: true
-opening-menu-msg: false;
+opening-menu-msg: false
 
-# [COOLDOWN SETTINGS ARE NOT IMPLEMENTED YET!]
-# Cooldown for using the /craft command
-cooldown: 0 # Time in seconds
+# Cooldown for using the /craft command - 0 means no cooldown
+cooldown: 10 # Time in seconds
 cooldown-msg: true
 bypass-cooldown-as-op: true
 

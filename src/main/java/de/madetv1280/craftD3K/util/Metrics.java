@@ -53,6 +53,7 @@ public class Metrics {
   private final MetricsBase metricsBase;
 
   /**
+   * Source: <a href="https://bstats.org/add-plugin">...</a>
    * Creates a new Metrics instance.
    *
    * @param plugin Your plugin instance.

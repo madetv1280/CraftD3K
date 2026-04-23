@@ -1,7 +1,12 @@
 # Changelog - CraftD3K
 
 ## [Unreleased] 2026.XX.XX
-- Cooldown
+- Update config, when plugin version is updated. But keep current settings.
+
+## [3.0.3-release] - 2026.04.23
+### Added:
+- Cooldown implementation
+- Refactoring & Preparation for cooldown implementation
 
 ## [3.0.2-release] - 2026.01.26
 ### Fixed:

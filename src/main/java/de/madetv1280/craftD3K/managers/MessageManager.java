@@ -1,12 +1,13 @@
 package de.madetv1280.craftD3K.managers;
 
 import de.madetv1280.craftD3K.constants.FileName;
-import de.madetv1280.craftD3K.constants.keys.Config;
 import de.madetv1280.craftD3K.constants.keys.messages.InternalMsg;
 import de.madetv1280.craftD3K.constants.keys.messages.Msg;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import static de.madetv1280.craftD3K.util.PluginLogger.log;
 
 import java.io.File;
 
@@ -34,7 +35,7 @@ public class MessageManager {
 
             return (prefix + msg).replace("&", "§").trim();
         }
-        return getMessage(InternalMsg.MESSAGE_NOT_FOUND).replace("{key}", key);
+        return "§aError, message " + key + " not found!";
 
     }
 

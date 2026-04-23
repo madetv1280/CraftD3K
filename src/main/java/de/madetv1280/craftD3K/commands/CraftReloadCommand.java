@@ -31,6 +31,8 @@ public class CraftReloadCommand implements CommandExecutor {
         Bukkit.getPluginManager().disablePlugin(plugin);
         Bukkit.getPluginManager().enablePlugin(plugin);
 
+        plugin.reloadConfig();
+
         sender.sendMessage(getMessage(Msg.PLUGIN_RELODED));
         return true;
     }

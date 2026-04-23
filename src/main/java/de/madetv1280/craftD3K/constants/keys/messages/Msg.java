@@ -9,5 +9,6 @@ public class Msg {
     public static final String NO_PERMISSION = "no-permission";
     public static final String OPENING_MENU = "opening-menu";
     public static final String PLUGIN_RELODED = "plugin-reloaded";
+    public static final String COOLDOWN = "cooldown";
 
 }

@@ -9,6 +9,8 @@ import de.madetv1280.craftD3K.managers.ConfigManager;
 import de.madetv1280.craftD3K.managers.MessageManager;
 import de.madetv1280.craftD3K.util.Metrics;
 import de.madetv1280.craftD3K.util.PluginLogger;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import static de.madetv1280.craftD3K.managers.ConfigManager.*;
@@ -27,7 +29,7 @@ public final class CraftD3K extends JavaPlugin {
         MessageManager.init(this);
 
         // Early exit
-        if (!pluginEnabled()) onDisable();
+        if (pluginDisabled()) onDisable();
 
         registerCommands();
 
@@ -48,18 +50,25 @@ public final class CraftD3K extends JavaPlugin {
         getServer().getPluginManager().disablePlugin(this);
     }
 
-
     private void registerCommands() {
         CraftCommand craftCommand = new CraftCommand(this);
 
-        this.getCommand(Command.CRAFT).setExecutor(craftCommand);
-        this.getCommand(Command.C).setExecutor(craftCommand);
+        setupCommand(Command.CRAFT, craftCommand);
+        setupCommand(Command.C, craftCommand);
+        setupCommand(Command.CRAFTRELOAD, new CraftReloadCommand());
+    }
 
-        this.getCommand(Command.CRAFTRELOAD).setExecutor(new CraftReloadCommand());
+    private void setupCommand(String name, CommandExecutor executor) {
+         PluginCommand command = this.getCommand(name);
+         if (command != null) {
+             command.setExecutor(executor);
+         } else {
+             log().error(InternalMsg.COMMAND_MISSING);
+         }
+
     }
 
     private void initMetrics() {
-        // init Metrics
         Metrics metrics = new Metrics(this, Integration.METRICS_PLUGIN_ID);
 
         log().info(InternalMsg.USING_BSTATS);
