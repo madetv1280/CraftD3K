@@ -1,6 +1,6 @@
 package de.madetv1280.craftD3K.constants;
 
-public class Integration {
+public final class Integration {
     private Integration() {}
 
     // External integrations

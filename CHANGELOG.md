@@ -3,6 +3,11 @@
 ## [Unreleased] 2026.XX.XX
 - Update config, when plugin version is updated. But keep current settings.
 
+## [3.0.4-release] - 2026.04.25
+### Fixed:
+- Typo correction (permission name)
+- Refactoring
+
 ## [3.0.3-release] - 2026.04.23
 ### Added:
 - Cooldown implementation

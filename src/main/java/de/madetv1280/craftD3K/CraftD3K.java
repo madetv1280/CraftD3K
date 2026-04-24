@@ -29,7 +29,10 @@ public final class CraftD3K extends JavaPlugin {
         MessageManager.init(this);
 
         // Early exit
-        if (pluginDisabled()) onDisable();
+        if (pluginDisabled()) {
+            getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
 
         registerCommands();
 
@@ -65,12 +68,10 @@ public final class CraftD3K extends JavaPlugin {
          } else {
              log().error(InternalMsg.COMMAND_MISSING);
          }
-
     }
 
     private void initMetrics() {
-        Metrics metrics = new Metrics(this, Integration.METRICS_PLUGIN_ID);
-
+        new Metrics(this, Integration.METRICS_PLUGIN_ID);
         log().info(InternalMsg.USING_BSTATS);
     }
 

@@ -1,6 +1,6 @@
 package de.madetv1280.craftD3K.constants;
 
-public class Command {
+public final class Command {
     private Command() {}
 
     // Commands

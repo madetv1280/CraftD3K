@@ -1,10 +1,9 @@
 package de.madetv1280.craftD3K.constants.keys.messages;
 
-public class InternalMsg {
+public final class InternalMsg {
     private InternalMsg() {}
 
     // Internal msg-key
-    public static final String MESSAGE_NOT_FOUND = "message-not-found";
     public static final String USING_BSTATS = "using-bstats";
 
     public static final String RUNNING_NEWER_THAN_AVAILABLE = "running-newer-than-available";

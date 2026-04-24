@@ -16,6 +16,8 @@ import org.json.*;
 
 public class UpdateChecker {
     public static void checkForUpdates(Plugin plugin) {
+        // TODO: Execute the entire method asynchronously (BukkitScheduler / CompleteableFuture),
+        //       to avoid blocking the main thread (server ticks) due to network delays.
 
         String latestVersion = getLatestVersion();
         String currentVersion = plugin.getPluginMeta().getVersion();

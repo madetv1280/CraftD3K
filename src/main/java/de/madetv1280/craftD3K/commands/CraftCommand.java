@@ -1,11 +1,10 @@
 package de.madetv1280.craftD3K.commands;
 
+import de.madetv1280.craftD3K.constants.Permission;
 import de.madetv1280.craftD3K.constants.keys.Config;
 import de.madetv1280.craftD3K.constants.keys.messages.Msg;
-import de.madetv1280.craftD3K.constants.Permission;
 import de.madetv1280.craftD3K.managers.ConfigManager;
 import de.madetv1280.craftD3K.managers.CooldownManager;
-import de.madetv1280.craftD3K.util.PluginLogger;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

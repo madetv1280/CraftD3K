@@ -14,11 +14,20 @@ public class CooldownManager {
     }
 
     public long getRemainingSeconds(UUID uuid, long cooldownMillis) {
+        return getRemainingMilliseconds(uuid, cooldownMillis) / 1000;
+    }
+
+    public long getRemainingMilliseconds(UUID uuid, long cooldownMillis) {
         long timeElapsed = System.currentTimeMillis() - cooldowns.get(uuid);
-        return (cooldownMillis - timeElapsed) / 1000;
+        return cooldownMillis - timeElapsed;
     }
 
     public void setCooldown(UUID uuid) {
         cooldowns.put(uuid, System.currentTimeMillis());
+    }
+
+    // TODO: Call method on PlayerQuitEvent.
+    public void cleanUp(UUID uuid) {
+        cooldowns.remove(uuid);
     }
 }

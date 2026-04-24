@@ -17,7 +17,6 @@ debug-enabled: "Debug mode is enabled!"
 cooldown: "Cooldown, %s seconds left."
 
 # THESE ARE INTERNAL (console) MESSAGES THAT NORMAL USERS WILL NOT SEE.
-message-not-found: "Message '{key}' not found, report this to an Admin!"
 using-bstats: "CraftD3K is using bStats."
 running-newer-than-available: "You are running version %s, which is newer than the latest available version %s on Modrinth."
 running-older-version: "You are running version %s, but a newer version %s is available on Modrinth. Consider updating!"

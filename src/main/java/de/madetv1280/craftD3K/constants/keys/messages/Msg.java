@@ -1,6 +1,6 @@
 package de.madetv1280.craftD3K.constants.keys.messages;
 
-public class Msg {
+public final class Msg {
     private Msg() {}
 
     // Msg-Keys

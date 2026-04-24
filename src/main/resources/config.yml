@@ -11,7 +11,7 @@ enabled: true
 opening-menu-msg: false
 
 # Cooldown for using the /craft command - 0 means no cooldown
-cooldown: 10 # Time in seconds
+cooldown: 0 # Time in seconds
 cooldown-msg: true
 bypass-cooldown-as-op: true
 

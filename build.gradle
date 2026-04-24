@@ -9,7 +9,7 @@ shadowJar {
 }
 
 group = 'de.madetv1280'
-version = '3.0.3-release'
+version = '3.0.4-release'
 
 repositories {
     mavenCentral()

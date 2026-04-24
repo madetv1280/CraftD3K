@@ -1,13 +1,11 @@
 package de.madetv1280.craftD3K.managers;
 
 import de.madetv1280.craftD3K.constants.FileName;
-import de.madetv1280.craftD3K.constants.keys.messages.InternalMsg;
 import de.madetv1280.craftD3K.constants.keys.messages.Msg;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import static de.madetv1280.craftD3K.util.PluginLogger.log;
 
 import java.io.File;
 
@@ -28,6 +26,7 @@ public class MessageManager {
 
     }
 
+    // TODO: Load Default-Value from JAR if keys are missing in the server yaml
     public static String getMessage(String key) {
         if (messages.contains(key)) {
             String prefix = messages.getString(Msg.PREFIX, "");

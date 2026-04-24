@@ -1,6 +1,6 @@
 package de.madetv1280.craftD3K.constants;
 
-public class FileName {
+public final class FileName {
     private FileName() {}
 
     // File names

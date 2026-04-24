@@ -1,6 +1,6 @@
 package de.madetv1280.craftD3K.constants.keys;
 
-public class Config {
+public final class Config {
     private Config() {}
 
     // Config-Keys
